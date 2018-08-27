@@ -1,0 +1,22 @@
+/* pages/home/home.wxss */
+
+.searchbar-result {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-cell {
+  padding: 12px 15px 12px 35px;
+}
+
+.weui-search-bar {
+  background-color: #e60012;
+  border-top:none;
+}
+.slide-image {
+  width: 100%;
+}

@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/owner/owner",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#E60012",
+    "navigationBarTitleText": "易房",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor":"#E60012",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "连云港",
+        "iconPath":"pages/images/tabbar/home1.png",
+        "selectedIconPath":"pages/images/tabbar/home2.png"
+      },
+      {
+        "pagePath": "pages/owner/owner",
+        "text": "业主圈",
+        "iconPath": "pages/images/tabbar/owner1.png",
+        "selectedIconPath": "pages/images/tabbar/owner2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "pages/images/tabbar/mine1.png",
+        "selectedIconPath": "pages/images/tabbar/mine2.png"
+      }
+    ]
+  }
+}
