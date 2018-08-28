@@ -1,4 +1,5 @@
 <!--pages/home/home.wxml-->
+<!-- 头部搜索 -->
 <view class="page">
   <view class="page__bd">
     <view class="weui-search-bar">
@@ -41,13 +42,98 @@
     </view>
   </view>
 </view>
+<!-- 滚动图 -->
 <view class='page'>
- 
-</view>
- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
         <image src="{{item}}" class="slide-image" mode="widthFix" />
       </swiper-item>
     </block>
   </swiper>
+</view>
+
+<!-- 列表 -->
+<view class="weui-panel__bd">
+  <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      <image class="weui-media-box__thumb" src="http://imgs0518.1f.cn/0518/201805/floors_img/5720_f_1525687584390_L.jpg" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">同科·汇丰小镇</view>
+      <view class="weui-flex weui-media-box__info">
+      <view class="weui-flex__item" style="color: red;">评分4分</view>
+      <view class="weui-flex__item" style="text-align: right;">6000元/㎡</view>
+      </view>
+      <view class="weui-media-box__desc">
+        开发区 猴嘴板块
+      </view>
+      <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+    </view>
+  </navigator>
+  <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      <image class="weui-media-box__thumb" src="http://imgs0518.1f.cn/0518/201805/floors_img/5720_f_1525687584390_L.jpg" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">同科·汇丰小镇</view>
+      <view class="weui-flex weui-media-box__info">
+        <view class="weui-flex__item" style="color: red;">评分4分</view>
+        <view class="weui-flex__item" style="text-align: right;">6000元/㎡</view>
+      </view>
+      <view class="weui-media-box__desc">
+        开发区 猴嘴板块
+      </view>
+      <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+    </view>
+  </navigator>
+  <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      <image class="weui-media-box__thumb" src="http://imgs0518.1f.cn/0518/201805/floors_img/5720_f_1525687584390_L.jpg" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">同科·汇丰小镇</view>
+      <view class="weui-flex weui-media-box__info">
+        <view class="weui-flex__item" style="color: red;">评分4分</view>
+        <view class="weui-flex__item" style="text-align: right;">6000元/㎡</view>
+      </view>
+      <view class="weui-media-box__desc">
+        开发区 猴嘴板块
+      </view>
+      <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+    </view>
+  </navigator>
+  <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      <image class="weui-media-box__thumb" src="http://imgs0518.1f.cn/0518/201805/floors_img/5720_f_1525687584390_L.jpg" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">同科·汇丰小镇</view>
+      <view class="weui-flex weui-media-box__info">
+        <view class="weui-flex__item" style="color: red;">评分4分</view>
+        <view class="weui-flex__item" style="text-align: right;">6000元/㎡</view>
+      </view>
+      <view class="weui-media-box__desc">
+        开发区 猴嘴板块
+      </view>
+      <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+    </view>
+  </navigator>
+  <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      <image class="weui-media-box__thumb" src="http://imgs0518.1f.cn/0518/201805/floors_img/5720_f_1525687584390_L.jpg" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">同科·汇丰小镇</view>
+      <view class="weui-flex weui-media-box__info">
+        <view class="weui-flex__item" style="color: red;">评分4分</view>
+        <view class="weui-flex__item" style="text-align: right;">6000元/㎡</view>
+      </view>
+      <view class="weui-media-box__desc">
+        开发区 猴嘴板块
+      </view>
+      <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+    </view>
+  </navigator>
+
+</view>
