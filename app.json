@@ -2,13 +2,15 @@
   "pages":[
     "pages/home/home",
     "pages/owner/owner",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/floors/floors"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#E60012",
     "navigationBarTitleText": "易房",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#E60012"
   },
   "tabBar": {
     "selectedColor":"#E60012",

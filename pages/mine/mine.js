@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      src:"https://www.df5g.cn/"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log("加载中");
   },
 
   /**
@@ -33,7 +33,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**

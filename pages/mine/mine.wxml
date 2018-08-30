@@ -1,2 +1,7 @@
 <!--pages/mine/mine.wxml-->
 <text>pages/mine/mine.wxml</text>
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <web-view src="{{src}}"></web-view>
+  </view>
+</view>
