@@ -140,7 +140,7 @@ Page({
           } else {
             if (res.data.data.list.length > 0) {
               for (let i = 0; i < res.data.data.list.length; i++) {
-                console.log(res.data.data.list[i])
+                // console.log(res.data.data.list[i])
                 olddata[olddatalength + i] = res.data.data.list[i]
               }
               that.data.pageindex++

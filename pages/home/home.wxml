@@ -43,10 +43,10 @@
   </view>
 
   <!-- 滚动图 -->
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 350rpx;">
     <block wx:for="{{imgUrls}}" wx:key="{{i}}">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" mode="widthFix" />
+        <image src="{{item}}" style="height: 350rpx;" class="slide-image" mode="scaleToFill" />
       </swiper-item>
     </block>
   </swiper>
@@ -54,7 +54,7 @@
   <!-- 列表 -->
   <view class="weui-panel__bd">
     <block wx:for="{{listdata}}" wx:key="index">
-      <navigator url="../floors/floors?id='{{item.id}}'" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <navigator url="../floors/floors?id={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
         <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
           <image class="weui-media-box__thumb" src="{{item.logo}}" />
         </view>
