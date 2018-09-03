@@ -1,0 +1,135 @@
+<!--pages/floors/floors.wxml-->
+<!--图片滑动放大区-->
+<view class="page">
+  <swiper style="height: 350rpx;" wx:if="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{i}}">
+      <swiper-item>
+        <image bindtap="imgYu" data-list="{{imgUrls}}" data-src="{{item}}" src="{{item}}" class="slide-image" mode="scaleToFill" style="height: 350rpx;" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--楼盘详情区-->
+  <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title">{{detail.floorName}}</view>
+      <view class="weui-flex weui-media-box__info">
+        <text>均  价：</text>
+        <lable style="color: #E60012">{{detail.price}}</lable>
+      </view>
+      <view class="weui-flex weui-media-box__info">
+        <text>面  积：</text>
+        <text style="color: #000000">{{detail.areaRange}}</text>
+      </view>
+      <view class="weui-flex weui-media-box__info">
+        <text>类  型：</text>
+        <text style="color: #000000">{{detail.propertyTypelist}}</text>
+      </view>
+      <view class="weui-flex weui-media-box__info">
+        <text>开  盘：</text>
+        <text style="color: #000000">{{detail.openTime}}</text>
+      </view>
+      <view class="weui-flex weui-media-box__info">
+        <text style="margin-top: 2px;">特  色：</text>
+        <lable style="color: #E60012;border: 1px solid #E60012;padding: 2px 2px;">{{detail.features}}</lable>
+      </view>
+    </view>
+  </view>
+
+  <view style="border: 6px solid #E8E8E8"></view>
+  <!--楼盘活动-->
+  <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title">
+        <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘活动</view>
+      <view class="weui-flex weui-media-box__info" style="color: #000000;margin-top: 10px;padding-bottom: 0px;">{{detail.huodongtitle}}</view>
+      <view class="weui-flex weui-media-box__info">
+        <image style="width: 15px;height: 15px;margin-right: 10px;" src="../images/floortail/clock.png" model="widthFix"></image>
+        <text>{{detail.huodongtime}}</text>
+      </view>
+      <view class="weui-flex weui-media-box__info" style="margin-top: 5px;">
+        <text>{{detail.huodongPlace}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view style="border: 6px solid #E8E8E8"></view>
+  <!--位置周边-->
+  <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title">
+        <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 位置周边</view>
+      <view class="weui-flex weui-media-box__info">
+        <text>地  址：</text>
+        <lable style="color: #000000">{{detail.address}}</lable>
+      </view>
+      <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+    </view>
+  </view>
+
+  <view style="border: 6px solid #E8E8E8"></view>
+  <!--楼盘介绍-->
+  <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title">
+        <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘介绍</view>
+      <view class="company-detail">
+        <view class="company-detail-content">
+          <view class="long-dec {{isFold?'hide':'show'}}" id="viewHightOnly">
+            <text class="first-dec" style="color: #000000">{{overview}}</text>
+          </view>
+          <image class="arrow" src=" {{isFold?'../images/floortail/tipdown.jpg':'../images/floortail/tipup.jpg'}}" bindtap="showAll" hidden="{{viewHightImg}}"></image>
+        </view>
+        <view class="long-dec show}}" id="viewHightOnlyCCC" hidden="{{viewHightBig}}">
+          <text class="first-dec" style="color: #000000">{{overview}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style="border: 6px solid #E8E8E8;margin-top: 20rpx;"></view>
+  <!--楼盘参数-->
+    <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title">
+                <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘介绍</view>
+            <view class="company-detail">
+                <view class="company-detail-content">
+                    <view class="long-dec {{isFold?'hide':'show'}}" id="viewHightOnlyParam">
+                        <view class="weui-media-box weui-media-box_text">
+                            <view class="weui-media-box__title">{{detail.floorName}}</view>
+                            <view class="weui-flex weui-media-box__info">
+                                <text>均  价：</text>
+                                <lable style="color: #E60012">{{detail.price}}</lable>
+                            </view>
+                            <view class="weui-flex weui-media-box__info">
+                                <text>面  积：</text>
+                                <text style="color: #000000">{{detail.areaRange}}</text>
+                            </view>
+                            <view class="weui-flex weui-media-box__info">
+                                <text>类  型：</text>
+                                <text style="color: #000000">{{detail.propertyTypelist}}</text>
+                            </view>
+                            <view class="weui-flex weui-media-box__info">
+                                <text>开  盘：</text>
+                                <text style="color: #000000">{{detail.openTime}}</text>
+                            </view>
+                            <view class="weui-flex weui-media-box__info">
+                                <text style="margin-top: 2px;">特  色：</text>
+                                <lable style="color: #E60012;border: 1px solid #E60012;padding: 2px 2px;">{{detail.features}}</lable>
+                            </view>
+                        </view>
+                    </view>
+                    <image class="arrow" src=" {{isFold?'../images/floortail/tipdown.jpg':'../images/floortail/tipup.jpg'}}" bindtap="showAll" hidden="{{viewHightImg}}"></image>
+                </view>
+                <view class="long-dec show}}" id="viewHightOnlyCCC" hidden="{{viewHightBigParam}}">
+                    <text class="first-dec" style="color: #000000">{{overview}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+  <!--楼盘亮点-->
+
+  <!--价格走势-->
+
+</view>
