@@ -36,9 +36,9 @@
     </view>
   </view>
 
-  <view style="border: 6px solid #E8E8E8"></view>
+  <view style="border: 6px solid #E8E8E8" wx:if="{{detail.floorName}}"></view>
   <!--楼盘活动-->
-  <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
+  <view class="weui-panel__bd" wx:if="{{detail.huodongPlace}}">
     <view class="weui-media-box weui-media-box_text">
       <view class="weui-media-box__title">
         <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘活动</view>
@@ -53,7 +53,7 @@
     </view>
   </view>
 
-  <view style="border: 6px solid #E8E8E8"></view>
+  <view style="border: 6px solid #E8E8E8" wx:if="{{detail.floorName}}"></view>
   <!--位置周边-->
   <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
     <view class="weui-media-box weui-media-box_text">
@@ -67,7 +67,7 @@
     </view>
   </view>
 
-  <view style="border: 6px solid #E8E8E8"></view>
+  <view style="border: 6px solid #E8E8E8" wx:if="{{detail.floorName}}"></view>
   <!--楼盘介绍-->
   <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
     <view class="weui-media-box weui-media-box_text">
@@ -80,56 +80,126 @@
           </view>
           <image class="arrow" src=" {{isFold?'../images/floortail/tipdown.jpg':'../images/floortail/tipup.jpg'}}" bindtap="showAll" hidden="{{viewHightImg}}"></image>
         </view>
-        <view class="long-dec show}}" id="viewHightOnlyCCC" hidden="{{viewHightBig}}">
-          <text class="first-dec" style="color: #000000">{{overview}}</text>
-        </view>
+        <!--<view class="long-dec show}}" id="viewHightOnlyCCC" hidden="{{viewHightBig}}">-->
+          <!--<text class="first-dec" style="color: #000000">{{overview}}</text>-->
+        <!--</view>-->
       </view>
     </view>
   </view>
 
-  <view style="border: 6px solid #E8E8E8;margin-top: 20rpx;"></view>
+  <view style="border: 6px solid #E8E8E8;margin-top: 20rpx;" wx:if="{{detail.floorName}}"></view>
   <!--楼盘参数-->
     <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
         <view class="weui-media-box weui-media-box_text">
             <view class="weui-media-box__title">
-                <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘介绍</view>
+                <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘参数</view>
             <view class="company-detail">
                 <view class="company-detail-content">
-                    <view class="long-dec {{isFold?'hide':'show'}}" id="viewHightOnlyParam">
-                        <view class="weui-media-box weui-media-box_text">
-                            <view class="weui-media-box__title">{{detail.floorName}}</view>
-                            <view class="weui-flex weui-media-box__info">
-                                <text>均  价：</text>
-                                <lable style="color: #E60012">{{detail.price}}</lable>
+                    <view class="long-dec {{isFoldParam?'hide':'show'}}" id="viewHightOnlyParam">
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.buildArea}}">
+                            <text>建筑面积：</text>
+                            <text style="color: #000000">{{detail.buildArea}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.yongdiArea}}">
+                            <text>用地面积：</text>
+                            <text style="color: #000000">{{detail.yongdiArea}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.rongjilv}}">
+                            <text>容 积 率  ：</text>
+                            <text style="color: #000000">{{detail.rongjilv}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.houseNum}}">
+                            <text>总 户 数  ：</text>
+                            <text style="color: #000000">{{detail.houseNum}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.parkNum}}">
+                            <text>车 位 数  ：</text>
+                            <text style="color: #000000">{{detail.parkNum}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.developCompany}}">
+                            <text>开 发 商  ：</text>
+                            <text style="color: #000000">{{detail.developCompany}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.property}}">
+                            <text>物业公司：</text>
+                            <text style="color: #000000">{{detail.property}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.buildCompany}}">
+                            <text>施工单位：</text>
+                            <text style="color: #000000">{{detail.buildCompany}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.investCompany}}">
+                            <text>投资公司：</text>
+                            <text style="color: #000000">{{detail.investCompany}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{detail.plan}}">
+                            <text>规划设计：</text>
+                            <text style="color: #000000">{{detail.plan}}</text>
+                        </view>
+                        <view style="width:100%;display: inline-block;white-space: pre-wrap;" wx:if="{{landscape}}">
+                            <text>景观公司：</text>
+                            <text style="color: #000000">{{landscape}}</text>
+                        </view>
+
+                    </view>
+                    <image class="arrow" src=" {{isFoldParam?'../images/floortail/tipdown.jpg':'../images/floortail/tipup.jpg'}}" bindtap="showAllisFoldParam" hidden="{{viewHightImgParam}}"></image>
+                </view>
+                <!--<view class="long-dec show}}" id="viewHightOnlyParamCCC" hidden="{{viewHightBigParam}}">-->
+                    <!--<text class="first-dec" style="color: #000000"></text>-->
+                <!--</view>-->
+            </view>
+        </view>
+    </view>
+
+    <view style="border: 6px solid #E8E8E8;margin-top: 20rpx;" wx:if="{{detail.floorName}}"></view>
+  <!--楼盘亮点-->
+    <view class="weui-panel__bd" wx:if="{{detail.floorName}}">
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title">
+                <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘亮点</view>
+            <view class="company-detail">
+                <view class="weui-panel__bd">
+                    <block wx:for="{{detail.floorlpmd}}" wx:key="index">
+                        <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                <image class="weui-media-box__thumb" src="{{item.logo}}" />
                             </view>
-                            <view class="weui-flex weui-media-box__info">
-                                <text>面  积：</text>
-                                <text style="color: #000000">{{detail.areaRange}}</text>
-                            </view>
-                            <view class="weui-flex weui-media-box__info">
-                                <text>类  型：</text>
-                                <text style="color: #000000">{{detail.propertyTypelist}}</text>
-                            </view>
-                            <view class="weui-flex weui-media-box__info">
-                                <text>开  盘：</text>
-                                <text style="color: #000000">{{detail.openTime}}</text>
-                            </view>
-                            <view class="weui-flex weui-media-box__info">
-                                <text style="margin-top: 2px;">特  色：</text>
-                                <lable style="color: #E60012;border: 1px solid #E60012;padding: 2px 2px;">{{detail.features}}</lable>
+                            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                <view class="weui-media-box__title">{{item.title}}</view>
+                                <view class="weui-media-box__desc">
+                                    {{item.introduce}}
+                                </view>
                             </view>
                         </view>
-                    </view>
-                    <image class="arrow" src=" {{isFold?'../images/floortail/tipdown.jpg':'../images/floortail/tipup.jpg'}}" bindtap="showAll" hidden="{{viewHightImg}}"></image>
-                </view>
-                <view class="long-dec show}}" id="viewHightOnlyCCC" hidden="{{viewHightBigParam}}">
-                    <text class="first-dec" style="color: #000000">{{overview}}</text>
+                    </block>
                 </view>
             </view>
         </view>
     </view>
-  <!--楼盘亮点-->
-
-  <!--价格走势-->
+  <!--价格走势  不能嵌套网页,功能做不了-->
+  <!--楼盘点评 需要登录,暂不做-->
+    <view style="border: 6px solid #E8E8E8;margin-top: 20rpx;" wx:if="{{detail.floorName}}"></view>
+  <!--楼盘资讯 暂不给url-->
+    <view class="weui-panel__bd" wx:if="{{detail.newsList}}">
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title">
+                <lable style="border: 2px solid #E60012;margin-right: 3px;"></lable> 楼盘资讯</view>
+            <view class="company-detail">
+                <view class="weui-panel__bd">
+                    <block wx:for="{{detail.newsList}}" wx:key="index">
+                        <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                <image class="weui-media-box__thumb" src="{{item.thumb}}" />
+                            </view>
+                            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                <view class="weui-media-box__title">{{item.title}}</view>
+                                <view class="weui-media-box__desc">{{item.inputtime}}</view>
+                            </view>
+                        </navigator>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
 
 </view>

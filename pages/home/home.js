@@ -130,6 +130,7 @@ Page({
       },
       success: function(res) {
         if (res.data.code == '200') {
+          console.log(res)
           let olddata = that.data.listdata
           let olddatalength = olddata.length
           if (that.data.pageindex >= parseInt(res.data.data.count / 10)) {
