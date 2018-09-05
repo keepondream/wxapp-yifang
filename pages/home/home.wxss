@@ -15,28 +15,27 @@
 
 .weui-search-bar {
   background-color: #e60012;
-  border-top:none;
+  border-top: none;
 }
+
 .slide-image {
   width: 100%;
 }
-.weui-media-box__hd_in-appmsg {
-  margin-right:0.8em;
-  width:120px;
-  height:90px;
-  line-height:60px;
-  text-align:center;
 
+.weui-media-box__hd_in-appmsg {
+  margin-right: 0.8em;
+  width: 120px;
+  height: 90px;
+  line-height: 60px;
+  text-align: center;
 }
 
 .weui-media-box__info {
-  margin-top:5px;
-  padding-bottom:5px;
-  font-size:13px;
-  color:#cecece;
-  line-height:1em;
-  list-style:none;
-  overflow:hidden;
-
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  color: #cecece;
+  line-height: 1em;
+  list-style: none;
+  overflow: hidden;
 }
-
