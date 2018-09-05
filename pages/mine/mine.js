@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      src:"https://www.df5g.cn/"
+      src:"https://0518.1f.cn/h5house/item156.html"
   },
 
   /**
